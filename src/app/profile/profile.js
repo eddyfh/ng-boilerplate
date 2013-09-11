@@ -1,4 +1,4 @@
-angular.module( 'ngBoilerplate.about', [
+angular.module( 'ngBoilerplate.profile', [
   'ui.state',
   'placeholders',
   'ui.bootstrap',
@@ -6,18 +6,18 @@ angular.module( 'ngBoilerplate.about', [
 ])
 
 .config(function config( $stateProvider ) {
-  $stateProvider.state( 'analytics', {
-    url: '/analytics',
+  $stateProvider.state( 'profile', {
+    url: '/profile',
     views: {
       "main": {
-        controller: 'AboutCtrl',
-        templateUrl: 'about/about.tpl.html'
+        controller: 'ProfileCtrl',
+        templateUrl: 'profile/profile.tpl.html'
       }
     }
   });
 })
 
-.controller( 'AboutCtrl', function AboutCtrl( $scope, titleService ) {
+.controller( 'ProfileCtrl', function AboutCtrl( $scope, titleService ) {
   titleService.setTitle( 'What is It?' );
   
   // This is simple a demo for UI Boostrap.
